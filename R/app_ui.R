@@ -1,16 +1,37 @@
 #' The application User-Interface
 #' 
 #' @param request Internal parameter for `{shiny}`. 
-#'     DO NOT REMOVE.
-#' @import shiny
+#' 
 #' @noRd
 app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic 
-    fluidPage(
-      h1("mktAnalytics")
+    shiny::navbarPage(
+      theme = bslib::bs_theme(
+        version = 5, 
+        bootswatch = "sketchy",
+        primary = "red",
+        font_scale = 1.2
+      ),
+      title = "mktAnalytics",
+      shiny::tabPanel(
+        "Home",
+        shiny::includeMarkdown(system.file("sobre.md", package = "mktAnalytics"))
+      ),
+      shiny::tabPanel(
+        "Descritiva",
+        mod_descritiva_ui("descritiva_ui_1")
+      ),
+      shiny::tabPanel(
+        "Componentes principais",
+        mod_pca_ui("pca_ui_1")
+      ),
+      shiny::tabPanel(
+        "Análise de agrupamento",
+        mod_cluster_ui("cluster_ui_1")
+      )
     )
   )
 }
