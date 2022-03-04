@@ -1,0 +1,13 @@
+Package: mktAnalytics
+Title: Marketing Analytics App
+Version: 0.0.0.9000
+Authors@R: person('Julio', 'Trecenti', email = 'julioazt@insper.edu.br', role = c('cre', 'aut'))
+Description: App para demonstrar técnicas estatísticas usadas em marketing analytics.
+License: MIT + file LICENSE
+Imports: 
+    config (>= 0.3.1),
+    golem (>= 0.3.1),
+    shiny (>= 1.7.1)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
