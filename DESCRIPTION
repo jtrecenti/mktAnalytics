@@ -30,3 +30,5 @@ LazyData: true
 RoxygenNote: 7.1.2
 URL: https://github.com/jtrecenti/mktAnalytics
 BugReports: https://github.com/jtrecenti/mktAnalytics/issues
+Depends: 
+    R (>= 2.10)
